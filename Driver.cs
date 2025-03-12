@@ -9,6 +9,7 @@ namespace university_enrollment_system
         private static bool running = true;
         public static void Main()
         {
+            people = ReadFromFile();
             while (running)
             {
                 DisplayMenu();
@@ -52,6 +53,10 @@ namespace university_enrollment_system
                 case 6:
                     Console.WriteLine("Goodbye!");
                     running = false;
+                    if (count > 0)
+                    {
+                        SaveToFile(people);
+                    }
                     break;
                 default:
                     Console.WriteLine("Invalid choice. Please try again.");
