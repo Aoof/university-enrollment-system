@@ -3,7 +3,7 @@ namespace university_enrollment_system
     static public class Driver
     {
 
-        const string FILENAME = "output.txt";
+        const string FILENAME = "UniversityData.txt";
         private static Person[] people = {};
         private static int count = 0;
         private static bool running = true;
